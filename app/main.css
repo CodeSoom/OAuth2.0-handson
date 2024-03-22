@@ -1,0 +1,44 @@
+.box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+.box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-conic-gradient(from var(--a), #0f0, #ff0, #0ff, #f0f, #0ff);
+  border-radius: 20px;
+  animation: rotating 4s linear infinite;
+}
+.box::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-conic-gradient(from var(--a), #0f0, #ff0, #0ff, #f0f, #0ff);
+  border-radius: 20px;
+  animation: rotating 4s linear infinite;
+  filter: blur(40px);
+  opacity: 0.75;
+}
+.box span {
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  inset: 4px;
+  border-radius: 16px;
+  z-index: 1;
+}
+@property --a {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+@keyframes rotating {
+  0% {
+    --a: 0deg;
+  }
+  100% {
+    --a: 360deg;
+  }
+}
