@@ -1,6 +1,4 @@
-# 코드숨 OAuth2.0 마스터 핸즈온
-
-[코드숨 핸즈온](https://www.codesoom.com/courses/handson)에서 사용할 실습 코드 입니다.
+# 코드숨 OAuth2.0 실습 코드
 
 ## API 목록
 
